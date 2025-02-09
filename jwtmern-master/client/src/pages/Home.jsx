@@ -44,7 +44,7 @@ const Home = () => {
   const userAuth = async () => {
     const token = localStorage.getItem("token");
     if (token) {
-      let api = "http://localhost:8000/user/userauth";
+      let api = "https://jwt-new-1.onrender.com/user/userauth";
       const tokenRes = await axios.post(api, null, { headers: { "auth-token": token } });
       localStorage.setItem("username", tokenRes.data.name);
       localStorage.setItem("useremail", tokenRes.data.email);

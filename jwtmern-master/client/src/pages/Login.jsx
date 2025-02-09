@@ -67,7 +67,7 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      let api = "http://localhost:8000/user/login";
+      let api = "https://jwt-new-1.onrender.com/user/login";
       const response = await axios.post(api, { email: email, password: password });
       console.log(response.data);
       localStorage.setItem("token", response.data.token);

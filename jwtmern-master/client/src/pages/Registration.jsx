@@ -83,7 +83,7 @@ const Registration = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      let api = "http://localhost:8000/user/registration";
+      let api = "https://jwt-new-1.onrender.com/user/registration";
       const response = await axios.post(api, input);
       message.success(response.data.msg);
       navigate("/login");
